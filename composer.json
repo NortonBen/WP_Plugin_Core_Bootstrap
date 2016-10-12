@@ -1,7 +1,6 @@
 {
     "name": "nortonperson/wp_plugin_core_bootstrap",
     "type": "wordpress-source-plugin",
-    "language": "php",
     "description": "Bootstrap For Plugin Wordpress",
     "authors": [
         {
@@ -10,7 +9,9 @@
         }
     ],
     "minimum-stability": "dev",
-    "require": {},
+    "require": {
+    	 "php": ">=5.3.2"
+    },
     "autoload": {
         "psr-4": {
             "EXP\\": "src/"
