@@ -20,16 +20,10 @@ class Bootstrap{
     {
         $data_exp = $GLOBALS['data_exp'];
         $plugin_path = $data_exp['plugin_path'];
-//        $this->file = __FILE__;
-//        $this->basename = plugin_basename($this->file);
-//
-//        $this->plugin_dir = dirname( plugin_dir_path($this->file));
+        $this->plugin_name = $data_exp['plugin_name'];
         $this->plugin_dir  = $plugin_path;
-        $this->plugin_url = plugin_dir_url(dirname($this->file));
-
+        $this->plugin_url = plugin_dir_url($data_exp['plugin_file']);
         $this->assets = trailingslashit($this->plugin_url . 'assets');
-        //$this->hook();
-
         Config::load();
 
     }
@@ -45,11 +39,19 @@ class Bootstrap{
 
 
     public function view($template, $data = array()){
+        $path_view = Config::$path_view[$this->plugin_name];
+        View::$path_view = $path_view;
+        Config::set_path_storega($this->plugin_name);
         Blade::sharpen();
         return View::make($template, $data);
     }
 
     public function compiled_View($template, $data = array()){
+        
+        $path_view = Config::$path_view[$this->plugin_name];
+        View::$path_view = $path_view;
+        Config::set_path_storega($this->plugin_name);
+
         Blade::sharpen();
         $view  = View::make($template, $data);
         $pathToCompiled = Blade::compiled( $view->path );

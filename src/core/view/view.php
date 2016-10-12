@@ -75,6 +75,9 @@ class View implements ArrayAccess {
 	 */
 	const engine = 'laravel.view.engine';
 
+	
+	public static $path_view = null;
+
 	/**
 	 * Create a new view instance.
 	 *
@@ -136,7 +139,7 @@ class View implements ArrayAccess {
 		$view = str_replace('.', '/', $view);
 
 		$search_paths = array(
-			EXP\Config::$path_view,
+			static::$path_view,
 			EXP\Config::$path_view_bootstrap
 		);
 
