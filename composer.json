@@ -1,0 +1,17 @@
+{
+    "name": "nortonperson/wp_plugin_core_bootstrap",
+    "description": "Bootstrap For Plugin Wordpress",
+    "authors": [
+        {
+            "name": "ben",
+            "email": "ben@joomexp.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "EXP\\": "src/"
+        }
+    }
+}
