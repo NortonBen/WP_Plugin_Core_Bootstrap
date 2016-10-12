@@ -1,6 +1,7 @@
 {
     "name": "nortonperson/wp_plugin_core_bootstrap",
     "type": "wordpress-source-plugin",
+    "language": "php",
     "description": "Bootstrap For Plugin Wordpress",
     "authors": [
         {
