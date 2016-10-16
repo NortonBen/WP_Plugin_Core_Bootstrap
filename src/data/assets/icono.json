@@ -1,0 +1,10 @@
+{
+  "style": [
+    {
+      "name": "icono",
+      "src": "/plugins/icono/1.3.0/icono.min.css",
+      "server": "https://cdnjs.cloudflare.com/ajax/libs/icono/1.3.0/icono.min.css",
+      "version": "1.3.0"
+    }
+  ]
+}

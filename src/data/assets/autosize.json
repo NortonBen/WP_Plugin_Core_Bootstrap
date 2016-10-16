@@ -1,0 +1,10 @@
+{
+  "script": [
+    {
+      "name": "autosize",
+      "src": "/plugins/autosize/autosize.min.js",
+      "server": "https://cdnjs.cloudflare.com/ajax/libs/autosize.js/3.0.17/autosize.min.js",
+      "version": "3.0.17"
+    }
+  ]
+}

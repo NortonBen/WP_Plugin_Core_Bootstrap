@@ -1,0 +1,19 @@
+{
+  "include": [
+    "jquery"
+  ],
+  "script": [
+    {
+      "name": "jquery-validate-additional-methods",
+      "src": "plugins/jquery-validate/1.15.1/additional-methods.min.js",
+      "server": "https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.1/additional-methods.min.js",
+      "version": "1.15.1"
+    },
+    {
+      "name": "jquery-validate",
+      "src": "plugins/jquery-validate/1.15.1/jquery.validate.min.js",
+      "server": "https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.1/jquery.validate.min.js",
+      "version": "1.15.1"
+    }
+  ]
+}

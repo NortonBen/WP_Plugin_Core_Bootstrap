@@ -1,0 +1,18 @@
+{
+  "script": [
+    {
+      "name"    : "bootstrap-select",
+      "src"     : "/plugins/bootstrap-select/1.11.2/js/bootstrap-select.min.js",
+      "server"  : "https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.11.2/js/bootstrap-select.min.js",
+      "version" : "1.11.2"
+    }
+  ],
+  "style": [
+    {
+      "name": "bootstrap-select",
+      "src": "/plugins/bootstrap-select/1.11.2/css/bootstrap-select.min.css",
+      "server": "https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.11.2/css/bootstrap-select.min.css",
+      "version": "1.11.2"
+    }
+  ]
+}

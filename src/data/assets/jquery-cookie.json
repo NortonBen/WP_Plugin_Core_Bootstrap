@@ -1,0 +1,13 @@
+{
+  "include": [
+    "jquery"
+  ],
+  "script": [
+    {
+      "name": "jquery-cookie",
+      "src": "/plugins/jquery-cookie/1.4.1/jquery.cookie.js",
+      "server": "https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js",
+      "version": "1.4.1"
+    }
+  ]
+}

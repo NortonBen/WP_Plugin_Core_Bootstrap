@@ -1,0 +1,10 @@
+{
+  "style": [
+    {
+      "name": "animate.css",
+      "src": "/plugins/animate.css/3.5.2/animate.min.css",
+      "server": "https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css",
+      "version": "3.5.2"
+    }
+  ]
+}

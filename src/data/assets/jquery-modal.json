@@ -1,0 +1,21 @@
+{
+  "include": [
+    "jquery"
+  ],
+  "script": [
+    {
+      "name"    : "jquery-modal",
+      "src"     : "/plugins/jquery-modal/js/jquery.modal.min.js",
+      "server"  : "https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.8.0/jquery.modal.min.js",
+      "version" : "0.8.0"
+    }
+  ],
+  "style": [
+    {
+      "name"    : "jquery-modal",
+      "src"     : "/plugins/jquery-modal/css/jquery.modal.min.css",
+      "server"  : "https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.8.0/jquery.modal.min.css",
+      "version" : "0.8.0"
+    }
+  ]
+}

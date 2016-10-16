@@ -6,13 +6,17 @@
  */
 
 namespace EXP;
+
+use EXP\Core\Env\Parser;
 use EXP\Core\View\Blade;
 use EXP\Core\View\View;
-use EXP\Core\Env\Parser;
+use EXP\Core\Asset\IncludeAsset;
 
-class Bootstrap{
+class Bootstrap
+{
     public $slug_pages = [];
     public $file = null;
+
     /**
      * Bootstrap constructor.
      */
@@ -21,7 +25,7 @@ class Bootstrap{
         $data_exp = $GLOBALS['data_exp'];
         $plugin_path = $data_exp['plugin_path'];
         $this->plugin_name = $data_exp['plugin_name'];
-        $this->plugin_dir  = $plugin_path;
+        $this->plugin_dir = $plugin_path;
         $this->plugin_url = plugin_dir_url($data_exp['plugin_file']);
         $this->assets = trailingslashit($this->plugin_url . 'assets');
         Config::load();
@@ -38,35 +42,64 @@ class Bootstrap{
     }
 
 
-    public function view($template, $data = array()){
+    public function view($template, $data = array())
+    {
         $path_view = Config::$path_view[$this->plugin_name];
         View::$path_view = $path_view;
         Config::set_path_storega($this->plugin_name);
         Blade::sharpen();
+
         return View::make($template, $data);
     }
 
-    public function compiled_View($template, $data = array()){
-        
+    public function compiled_View($template, $data = array())
+    {
+
         $path_view = Config::$path_view[$this->plugin_name];
         View::$path_view = $path_view;
         Config::set_path_storega($this->plugin_name);
 
         Blade::sharpen();
-        $view  = View::make($template, $data);
-        $pathToCompiled = Blade::compiled( $view->path );
-        if ( ! file_exists( $pathToCompiled ) or Blade::expired( $view->view, $view->path ) )
-            file_put_contents( $pathToCompiled,Blade::compile( $view ));
+        $view = View::make($template, $data);
+        $pathToCompiled = Blade::compiled($view->path);
+        if (!file_exists($pathToCompiled) or Blade::expired($view->view, $view->path))
+            file_put_contents($pathToCompiled, Blade::compile($view));
         $view->path = $pathToCompiled;
+
         return $pathToCompiled;
     }
+
+    public function load_assets($list = array(), $in_bootstrap = true)
+    {
+        $path = Config::$url_bootstrap . DS . 'assets';
+        $dir = Config::$dir_bootsrap . DS . 'assets';
+        if (!$in_bootstrap) {
+            $path = $this->plugin_url . DS . 'assets';
+            $dir = $this->plugin_dir . DS . 'assets';
+        }
+        IncludeAsset::$path = $path;
+        IncludeAsset::$dir = $dir;
+        IncludeAsset::load_assets($list);
+        IncludeAsset::$list_include_now[$path] = [];
+    }
+
+
+    public function load_assets_plugin($name, $url,$version, $type)
+    {
+        $path = $this->plugin_url . DS . 'assets';
+        $dir = $this->plugin_dir . DS . 'assets';
+        IncludeAsset::$path = $path;
+        IncludeAsset::$dir = $dir;
+        IncludeAsset::load_assets_plugin($name,$url,$version,$type);
+    }
+
     /**
      * @param $path
      */
     public function folder_class_calling_out($path)
     {
         $path = trim($path, '/');
-        $full_path = $this->plugin_dir . '/' .  $this->switch_alias_dir($path);
+        $full_path = $this->plugin_dir . '/' . $this->switch_alias_dir($path);
 
         if (is_dir($full_path)) {
 
@@ -93,6 +126,42 @@ class Bootstrap{
     }
 
     /**
+     * @param $path
+     * @return mixed
+     */
+    public function switch_alias_dir($path)
+    {
+        if (strpos($path, '.') !== false)
+            return str_replace('.', DIRECTORY_SEPARATOR, $path);
+
+        return $path;
+    }
+
+    /**
+     * @param $settings
+     * @return string
+     */
+    public function generate_field($field)
+    {
+
+        // Prevent the lack of attributes
+        $field = array_merge(array(
+            'type'           => 'text',
+            'select_type'    => '',
+            'name'           => '',
+            'class'          => '',
+            'id'             => '',
+            'attrs'          => [],
+            'placeholder'    => '',
+            'default'        => '',
+            'options'        => '',
+            'default_option' => []
+        ), $field);
+
+        return $this->get_template_file__('fields.' . $field['type'], $field, 'bootstrap.template');
+    }
+
+    /**
      * Render template file in template folder
      * ------------------------------------------
      * @param $alias_path
@@ -107,7 +176,7 @@ class Bootstrap{
         if ($place == null) {
             $place = 'template/';
         } else {
-            $place =  $this->switch_alias_dir($place);
+            $place = $this->switch_alias_dir($place);
         }
 
         $full_path = $this->plugin_dir . DIRECTORY_SEPARATOR . $place . DIRECTORY_SEPARATOR . $this->switch_alias_dir($alias_path);
@@ -124,33 +193,11 @@ class Bootstrap{
         if (file_exists($full_path_name)) {
             ob_start();
             include $full_path_name;
+
             return ob_get_clean();
         }
+
         return '';
-    }
-
-    /**
-     * @param $settings
-     * @return string
-     */
-    public function generate_field( $field )
-    {
-
-        // Prevent the lack of attributes
-        $field = array_merge(array(
-            'type'        => 'text',
-            'select_type' => '',
-            'name'        => '',
-            'class'       => '',
-            'id'          => '',
-            'attrs'       => [],
-            'placeholder' => '',
-            'default'     => '',
-            'options'     => '',
-            'default_option' => []
-        ), $field);
-
-        return $this->get_template_file__('fields.' . $field['type'], $field, 'bootstrap.template');
     }
 
     /**
@@ -162,8 +209,8 @@ class Bootstrap{
         wp_enqueue_style('style.css', Config::$url_bootstrap . '/assets/css/style.css');
         wp_enqueue_style('waves.css', Config::$url_bootstrap . '/assets/plugins/node-waves/waves.css');
         wp_enqueue_style('animate.css', Config::$url_bootstrap . '/assets/plugins/animate-css/animate.css');
-        wp_enqueue_style('multi-select.css', Config::$url_bootstrap. '/assets/plugins/multi-select/css/multi-select.css');
-        wp_enqueue_style('bootstrap-select.min.css', Config::$url_bootstrap. '/assets/plugins/bootstrap-select/css/bootstrap-select.min.css');
+        wp_enqueue_style('multi-select.css', Config::$url_bootstrap . '/assets/plugins/multi-select/css/multi-select.css');
+        wp_enqueue_style('bootstrap-select.min.css', Config::$url_bootstrap . '/assets/plugins/bootstrap-select/css/bootstrap-select.min.css');
 
         // Google Front
         wp_enqueue_style('material.icons', 'https://fonts.googleapis.com/icon?family=Material+Icons');
@@ -178,16 +225,19 @@ class Bootstrap{
         wp_enqueue_script('bootstrap-select.min.js', Config::$url_bootstrap . '/assets/plugins/bootstrap-select/js/bootstrap-select.min.js', null, '1.0.0', TRUE);
     }
 
-    public function embed_admin_setting_page() {
-        wp_enqueue_style('admin.bootstrap.css', Config::$url_bootstrap . '/assets/css/admin.bootstrap.css');
+    public function embed_admin_setting_page()
+    {
+        wp_enqueue_style('admin..css', Config::$url_bootstrap . '/assets/css/admin.bootstrap.css');
         wp_enqueue_script('tooltips-popovers.js', Config::$url_bootstrap . '/assets/js/tooltips-popovers.js', null, '1.0.0', TRUE);
 
     }
 
-
-    public function string_to_url( $string ) {
+    public function string_to_url($string)
+    {
         $explode = explode(' ', $string);
+
         return implode('+', $explode);
+
         return str_replace(' ', '+', $string);
     }
 
@@ -199,18 +249,6 @@ class Bootstrap{
     {
         if (strpos($path, '.') !== false)
             return str_replace('.', '/', $path);
-
-        return $path;
-    }
-
-    /**
-     * @param $path
-     * @return mixed
-     */
-    public function switch_alias_dir($path)
-    {
-        if (strpos($path, '.') !== false)
-            return str_replace('.', DIRECTORY_SEPARATOR, $path);
 
         return $path;
     }

@@ -1,0 +1,43 @@
+{
+  "include": [
+    "jquery"
+  ],
+  "script": [
+    {
+      "name": "bootstrap",
+      "src": "/plugins/bootstrap/3.3.7/js/bootstrap.min.js",
+      "server": "https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js",
+      "version": "3.3.7"
+    }
+  ],
+  "style": [
+    {
+      "name": "bootstrap",
+      "src": "/plugins/bootstrap/3.3.7/css/bootstrap.min.css",
+      "server": "https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css",
+      "version": "3.3.7"
+    }
+  ],
+  "file": [
+    {
+      "src": "/plugins/bootstrap/3.3.7/fonts/glyphicons-halflings-regular.woff2",
+      "server": "https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/fonts/glyphicons-halflings-regular.woff2"
+    },
+    {
+      "src": "/plugins/bootstrap/3.3.7/fonts/glyphicons-halflings-regular.ttf",
+      "server": "https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/fonts/glyphicons-halflings-regular.ttf"
+    },
+    {
+      "src": "/plugins/bootstrap/3.3.7/fonts/glyphicons-halflings-regular.woff",
+      "server": "https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/glyphicons-halflings-regular.woff"
+    },
+    {
+      "src": "/plugins/bootstrap/3.3.7/fonts/glyphicons-halflings-regular.svg",
+      "server": "https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/fonts/glyphicons-halflings-regular.svg"
+    },
+    {
+      "src": "/plugins/bootstrap/3.3.7/fonts/glyphicons-halflings-regular.eot",
+      "server": "https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/fonts/glyphicons-halflings-regular.eot"
+    }
+  ]
+}

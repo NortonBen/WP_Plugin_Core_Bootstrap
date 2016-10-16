@@ -1,0 +1,27 @@
+{
+  "include": [
+    "jquery"
+  ],
+  "script": [
+    {
+      "name": "jquery.multi-select",
+      "src": "/plugins/multi-select/0.9.12/js/jquery.multi-select.min.js",
+      "server": "https://cdnjs.cloudflare.com/ajax/libs/multi-select/0.9.12/js/jquery.multi-select.min.js",
+      "version": "0.9.12"
+    }
+  ],
+  "style": [
+    {
+      "name": "jquery.multi-select",
+      "src": "/plugins/multi-select/0.9.12/css/multi-select.min.css",
+      "server": "https://cdnjs.cloudflare.com/ajax/libs/multi-select/0.9.12/css/multi-select.min.css",
+      "version": "0.9.12"
+    }
+  ],
+  "file": [
+    {
+      "src": "/plugins/multi-select/0.9.12/img/switch.png",
+      "server": "https://cdnjs.cloudflare.com/ajax/libs/multi-select/0.9.12/img/switch.png"
+    }
+  ]
+}

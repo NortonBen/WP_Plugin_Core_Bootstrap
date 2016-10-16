@@ -1,0 +1,31 @@
+{
+  "include": [
+    "jquery"
+  ],
+  "script": [
+    {
+      "name": "chosen.jquery",
+      "src": "/plugins/",
+      "server": "https://cdnjs.cloudflare.com/ajax/libs/chosen/1.6.2/chosen.jquery.min.js",
+      "version": "1.6.2"
+    }
+  ],
+  "style": [
+    {
+      "name": "chosen.jquery",
+      "src": "/plugins/chosen/1.6.2/chosen.min.css",
+      "server": "https://cdnjs.cloudflare.com/ajax/libs/chosen/1.6.2/chosen.min.css",
+      "version": "1.6.2"
+    }
+  ],
+  "file": [
+    {
+      "src": "/plugins/chosen/1.6.2/chosen-sprite.png",
+      "server": "https://cdnjs.cloudflare.com/ajax/libs/chosen/1.6.2/chosen-sprite.png"
+    },
+    {
+      "src": "/plugins/chosen/1.6.2/chosen-sprite@2x.png",
+      "server": "https://cdnjs.cloudflare.com/ajax/libs/chosen/1.6.2/chosen-sprite@2x.png"
+    }
+  ]
+}

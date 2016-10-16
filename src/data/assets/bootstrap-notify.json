@@ -1,0 +1,26 @@
+{
+  "include": [
+  ],
+  "script": [
+    {
+      "name": "bootstrap-notify",
+      "src": "/plugins/bootstrap-notify/0.2.0/js/bootstrap-notify.min.js",
+      "server": "https://cdnjs.cloudflare.com/ajax/libs/bootstrap-notify/0.2.0/js/bootstrap-notify.min.js",
+      "version": "0.2.0"
+    }
+  ],
+  "style": [
+    {
+      "name": "bootstrap-notify",
+      "src": "/plugins/bootstrap-notify/0.2.0/css/bootstrap-notify.min.css",
+      "server": "https://cdnjs.cloudflare.com/ajax/libs/bootstrap-notify/0.2.0/css/bootstrap-notify.min.css",
+      "version": "0.2.0"
+    },
+    {
+      "name": "alert-blackgloss-bootstrap-notify",
+      "src": "/plugins/bootstrap-notify/0.2.0//css/styles/alert-blackgloss.css",
+      "server": "https://cdnjs.cloudflare.com/ajax/libs/bootstrap-notify/0.2.0/css/styles/alert-blackgloss.css",
+      "version": "0.2.0"
+    }
+  ]
+}

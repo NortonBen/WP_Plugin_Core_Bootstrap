@@ -1,0 +1,10 @@
+{
+  "style": [
+    {
+      "name": "material.icons",
+      "src": "https://fonts.googleapis.com/icon?family=Material+Icons",
+      "server": "",
+      "version": "1.0.0"
+    }
+  ]
+}

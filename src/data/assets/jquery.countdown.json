@@ -1,0 +1,13 @@
+{
+  "include": [
+    "jquery"
+  ],
+  "script": [
+    {
+      "name": "jquery.countdown/",
+      "src": "/plugins/jquery.countdown/2.2.0/jquery.countdown.min.js",
+      "server": "https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js",
+      "version": "2.2.0"
+    }
+  ]
+}

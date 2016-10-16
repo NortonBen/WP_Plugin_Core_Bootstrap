@@ -1,0 +1,30 @@
+{
+  "script": [
+    {
+      "name": "AdminLTE",
+      "src": "/plugins/admin-lte/2.3.6/js/app.min.js",
+      "server": "https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.3.6/js/app.min.js",
+      "version": "2.3.6"
+    },
+    {
+      "name": "AdminLTE_DB",
+      "src": "/plugins/admin-lte/2.3.6/js/pages/dashboard.js",
+      "server": "https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.3.6/js/pages/dashboard.js",
+      "version": "2.3.6"
+    }
+  ],
+  "style": [
+    {
+      "name": "AdminLTE",
+      "src": "/plugins/admin-lte/2.3.6/css/AdminLTE.min.css",
+      "server": "https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.3.6/css/AdminLTE.min.css",
+      "version": "2.3.6"
+    },
+    {
+      "name": "AdminLTE_Skins",
+      "src": "/plugins/admin-lte/2.3.6/css/skins/_all-skins.min.css",
+      "server": "https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.3.6/css/skins/_all-skins.min.css",
+      "version": "2.3.6"
+    }
+  ]
+}

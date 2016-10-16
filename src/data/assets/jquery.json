@@ -1,0 +1,10 @@
+{
+  "script": [
+    {
+      "name"    : "jquery",
+      "src"     : "/plugins/jquery/2.2.4/jquery.min.js",
+      "server"  : "https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js",
+      "version" : "2.2.4"
+    }
+  ]
+}

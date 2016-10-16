@@ -1,0 +1,36 @@
+{
+  "style": [
+    {
+      "name"    : "font-awesome",
+      "src"     : "/plugins/font-awesome/4.6.3/css/font-awesome.min.css",
+      "server"  : "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css",
+      "version" : "4.6.3"
+    }
+  ],
+  "file": [
+    {
+      "src"     : "/plugins/font-awesome/4.6.3/fonts/fontawesome-webfont.eot",
+      "server"  : "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/fonts/fontawesome-webfont.eot"
+    },
+    {
+      "src"     : "/plugins/font-awesome/4.6.3/fonts/fontawesome-webfont.svg",
+      "server"  : "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/fonts/fontawesome-webfont.svg"
+    },
+    {
+      "src"     : "/plugins/font-awesome/4.6.3/fonts/fontawesome-webfont.ttf",
+      "server"  : "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/fonts/fontawesome-webfont.ttf"
+    },
+    {
+      "src"     : "/plugins/font-awesome/4.6.3/fonts/fontawesome-webfont.woff",
+      "server"  : "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/fonts/fontawesome-webfont.woff"
+    },
+    {
+      "src"     : "/plugins/font-awesome/4.6.3/fonts/FontAwesome.otf",
+      "server"  : "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/fonts/FontAwesome.otf"
+    },
+    {
+      "src"     : "/plugins/font-awesome/4.6.3/fonts/fontawesome-webfont.woff2",
+      "server"  : "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/fonts/fontawesome-webfont.woff2"
+    }
+  ]
+}

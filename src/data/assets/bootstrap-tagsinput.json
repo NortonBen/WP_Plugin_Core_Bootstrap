@@ -1,0 +1,24 @@
+{
+  "script": [
+    {
+      "name": "bootstrap-tagsinput",
+      "src": "/plugins/bootstrap-tagsinput/0.8.0/bootstrap-tagsinput.min.js",
+      "server": "https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tagsinput/0.8.0/bootstrap-tagsinput.min.js",
+      "version": "0.8.0"
+    }
+  ],
+  "style": [
+    {
+      "name": "bootstrap-tagsinput",
+      "src": "/plugins/bootstrap-tagsinput/0.8.0/bootstrap-tagsinput.css",
+      "server": "https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tagsinput/0.8.0/bootstrap-tagsinput.css",
+      "version": "0.8.0"
+    },
+    {
+      "name": "bootstrap-tagsinput-typeahead",
+      "src": "/plugins/bootstrap-tagsinput/0.8.0/bootstrap-tagsinput-typeahead.css",
+      "server": "https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tagsinput/0.8.0/bootstrap-tagsinput-typeahead.css",
+      "version": "0.8.0"
+    }
+  ]
+}

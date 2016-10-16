@@ -1,0 +1,18 @@
+{
+  "script": [
+    {
+      "name"    : "node-waves",
+      "src"     : "/plugins/node-waves/0.7.5/js/waves.min.js",
+      "server"  : "https://cdnjs.cloudflare.com/ajax/libs/node-waves/0.7.5/waves.min.js",
+      "version" : "0.7.5"
+    }
+  ],
+  "style": [
+    {
+      "name": "node-waves",
+      "src": "/plugins/node-waves/0.7.5/css/waves.min.css",
+      "server": "https://cdnjs.cloudflare.com/ajax/libs/node-waves/0.7.5/waves.min.css",
+      "version": "0.7.5"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "include": [
+    "jquery"
+  ],
+  "script": [
+    {
+      "name"    : "bootstrap-4",
+      "src"     : "/plugins/bootstrap/4.0.0-alpha.4/js/bootstrap.min.js",
+      "server"  : "https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.4/js/bootstrap.min.js",
+      "version" : "4.0.0"
+    }
+  ],
+  "style": [
+    {
+      "name"    : "bootstrap-4",
+      "src"     : "/plugins/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css",
+      "server"  : "https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.4/css/bootstrap.min.css",
+      "version" : "4.0.0"
+    }
+  ]
+}

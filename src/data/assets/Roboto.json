@@ -1,0 +1,10 @@
+{
+  "style": [
+    {
+      "name" : "Roboto",
+      "src"  : "https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext",
+      "server": "",
+      "version": "1.0.0"
+    }
+  ]
+}

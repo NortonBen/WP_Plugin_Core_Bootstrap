@@ -1,0 +1,21 @@
+{
+  "include": [
+    "jquery"
+  ],
+  "script": [
+    {
+      "name": "jvectormap",
+      "src": "/plugins/jvectormap/2.0.4/jquery-jvectormap.min.js",
+      "server": "https://cdnjs.cloudflare.com/ajax/libs/jvectormap/2.0.4/jquery-jvectormap.min.js",
+      "version": "2.0.4"
+    }
+  ],
+  "style": [
+    {
+      "name": "jvectormap",
+      "src": "/plugins/jvectormap/2.0.4/jquery-jvectormap.min.css",
+      "server": "https://cdnjs.cloudflare.com/ajax/libs/jvectormap/2.0.4/jquery-jvectormap.min.css",
+      "version": "2.0.4"
+    }
+  ]
+}

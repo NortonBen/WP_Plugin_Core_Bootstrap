@@ -1,0 +1,18 @@
+{
+  "script": [
+    {
+      "name": "evil-icons",
+      "src": "/plugins/evil-icons/1.8.0/evil-icons.min.js",
+      "server": "https://cdnjs.cloudflare.com/ajax/libs/evil-icons/1.8.0/evil-icons.min.js",
+      "version": "1.8.0"
+    }
+  ],
+  "style": [
+    {
+      "name": "evil-icons",
+      "src": "/plugins/evil-icons/1.8.0/evil-icons.min.css",
+      "server": "https://cdnjs.cloudflare.com/ajax/libs/evil-icons/1.8.0/evil-icons.min.css",
+      "version": "1.8.0"
+    }
+  ]
+}

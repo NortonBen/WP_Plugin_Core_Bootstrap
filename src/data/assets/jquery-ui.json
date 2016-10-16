@@ -1,0 +1,27 @@
+{
+  "include": [
+    "jquery"
+  ],
+  "script": [
+    {
+      "name": "jquery-ui",
+      "src": "/plugins/jqueryui/1.12.1/jquery-ui.min.js",
+      "server": "https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js",
+      "version": "1.12.1"
+    }
+  ],
+  "style": [
+    {
+      "name": "jquery-ui-theme",
+      "src": "/plugins/jqueryui/1.12.1/jquery-ui.theme.min.css",
+      "server": "https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.theme.min.css",
+      "version": "1.12.1"
+    },
+    {
+      "name": "jquery-ui",
+      "src": "/plugins/jqueryui/1.12.1/jquery-ui.min.css",
+      "server": "https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css",
+      "version": "1.12.1"
+    }
+  ]
+}

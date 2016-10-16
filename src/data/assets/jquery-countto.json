@@ -1,0 +1,21 @@
+{
+  "include": [
+    "jquery"
+  ],
+  "script": [
+    {
+      "name": "",
+      "src": "",
+      "server": "",
+      "version": ""
+    }
+  ],
+  "style": [
+    {
+      "name": "",
+      "src": "",
+      "server": "",
+      "version": ""
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "script": [
+    {
+      "name": "vuejs-min",
+      "src": "/plugins/vue/2.0.3/vue.min.js",
+      "server": "https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.3/vue.min.js",
+      "version": "2.0.3"
+    }
+  ]
+}

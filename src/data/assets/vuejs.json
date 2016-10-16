@@ -1,0 +1,10 @@
+{
+  "script": [
+    {
+      "name": "vuejs",
+      "src": "/plugins/vue/2.0.3/vue.js",
+      "server": "https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.3/vue.js",
+      "version": "2.0.3"
+    }
+  ]
+}

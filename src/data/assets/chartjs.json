@@ -1,0 +1,10 @@
+{
+  "script": [
+    {
+      "name": "Chartjs",
+      "src": "/plugins/chartjs/2.3.0/Chart.min.js",
+      "server": "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.min.js",
+      "version": "2.3.0"
+    }
+  ]
+}

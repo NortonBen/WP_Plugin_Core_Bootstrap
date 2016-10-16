@@ -29,6 +29,7 @@ class Blade {
 		'yield_sections',
 		'section_start',
 		'section_end',
+		'values'
 	);
 
 	/**
@@ -137,7 +138,6 @@ class Blade {
 		foreach (static::$compilers as $compiler)
 		{
 			$method = "compile_{$compiler}";
-
 			$value = static::$method($value, $view);
 		}
 		//$value = \WP_Blade::compile_string($value, $view);
@@ -223,9 +223,37 @@ class Blade {
 	 */
 	protected static function compile_echos($value)
 	{
-		$value = preg_replace('/\{\{\{(.+?)\}\}\}/', '<?php echo HTML::entities($1); ?>', $value);
+		$pattern = sprintf('/(@)?%s\s*(.+?)\s*%s(\r?\n)?/s', '{{', '}}');
 
-		return preg_replace('/\{\{(.+?)\}\}/', '<?php echo $1; ?>', $value);
+		$callback = function ($matches) {
+			$whitespace = empty($matches[3]) ? '' : $matches[3].$matches[3];
+
+			return $matches[1] ? $matches[0] : '<?php echo '.static::compileEchoDefaults($matches[2]).'; ?>'.$whitespace;
+		};
+
+		return preg_replace_callback($pattern, $callback, $value);
+	}
+
+	/**
+	 * Compile the default values for the echo statement.
+	 *
+	 * @param  string  $value
+	 * @return string
+	 */
+	public static function compileEchoDefaults($value)
+	{
+		return preg_replace('/^(?=\$)(.+?)(?:\s+or\s+)(.+?)$/s', 'isset($1) ? $1 : $2', $value);
+	}
+
+
+	protected static function compile_values($value){
+		preg_match_all('/\@\{\{(.+?)\}\}/', $value, $matches);
+		foreach ($matches[0] as $key=>$match){
+			$replace = "{{".$matches[1][$key]."}}";
+			//$match = '/\@\{\{'.$matches[1][$key].'\}\}/';
+			$value = str_replace($match,$replace,$value);
+		}
+		return $value;
 	}
 
 	/**
